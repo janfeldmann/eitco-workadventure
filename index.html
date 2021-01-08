@@ -1,20 +1,78 @@
 <html>
-    <head>
-        <script>
-            window.onload = function() {
-                var path = window.location.pathname;
-                if (path.endsWith('index.html')) {
-                    path = path.substr(path, path.length - 'index.html'.length);
-                }
-                var url = 'https://play.workadventu.re/_/global/'+window.location.host+path+'map.json';
-                document.getElementById('mapLink').href = url;
-                document.getElementById('mapLink').innerText = url;
-            };
-        </script>
-    </head>
-    <body>
-        This website contains a map for <a href="https://workadventu.re">Workadventu.re</a>.
-        <br/>
-        You can access this map at <a id="mapLink" href=""></a>
-    </body>
+  <head>
+    <title>Digitales Büro | intention</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <script>
+      window.onload = function () {
+        var path = window.location.pathname;
+        if (path.endsWith("index.html")) {
+          path = path.substr(path, path.length - "index.html".length);
+        }
+        var url =
+          "https://play.workadventu.re/_/global/" +
+          window.location.host +
+          path +
+          "map.json";
+        document.getElementById("mapLink").href = url;
+      };
+    </script>
+  </head>
+  <style>
+    body {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      color: #3a3a3a;
+    }
+
+    img {
+      display: block;
+      margin-bottom: 30px;
+      margin: -100px 0 -60px 40px;
+    }
+
+    span {
+      font-size: 1.8rem;
+      display: block;
+      text-align: center;
+    }
+
+    a {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      background: #0e707f;
+      color: #3a3a3a;
+      margin: 1rem 0px 0px;
+      line-height: 1;
+      text-align: center;
+      transition: all 200ms ease 0s;
+      padding: 15px 25px 15px;
+      text-transform: uppercase;
+      display: inline-flex;
+      transition: all 200ms ease;
+    }
+
+    a:hover {
+      background: #3a3a3a;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div>
+      <img src="assets/logo.svg" width="250" />
+      <a id="mapLink" href="">Zum Digitalen Büro</a>
+    </div>
+  </body>
 </html>
